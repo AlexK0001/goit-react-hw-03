@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import contact from '../../contacts.json'
+import css from './Contact.module.css'
 
-
-export default function Contact({name, number}) {
+export default function Contact( {contact}) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleContent = () => {
@@ -10,10 +11,12 @@ export default function Contact({name, number}) {
     };
 
     return (
-    <div>
-        <p>{name}</p>
-        <p>{number}</p>
-        <button onClick={toggleContent}>Delete</button>
+    <div className={css.container} key={contact.id}>
+      <div className={css.text}>
+        <p>{contact.name}</p>
+        <p>{contact.number}</p>
+      </div>
+        <button className={css.btn} onClick={toggleContent}>Delete</button>
     </div>
     )
 }

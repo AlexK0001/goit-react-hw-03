@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import contacts from '../../contacts.json'
+import contact from '../../contacts.json'
+import ContactForm from '../ContactForm/ContactForm'
+import SearchBox from '../SearchBox/SearchBox'
+import ContactList from '../ContactList/ContactList'
 
 
 export default function App() {
@@ -9,7 +12,7 @@ export default function App() {
       <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox />
-      <ContactList items={contacts}/>
+      <ContactList items={contact}/>
     </div>
 
   )
