@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './App.css'
 import contact from '../../contacts.json'
 import ContactForm from '../ContactForm/ContactForm'
@@ -6,7 +6,9 @@ import SearchBox from '../SearchBox/SearchBox'
 import ContactList from '../ContactList/ContactList'
 
 
+
 export default function App() {
+
   return (
     <div>
       <h1>Phonebook</h1>
