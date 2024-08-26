@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import contact from '../../contacts.json'
 import ContactForm from '../ContactForm/ContactForm'
 import SearchBox from '../SearchBox/SearchBox'
 import ContactList from '../ContactList/ContactList'
@@ -38,7 +37,7 @@ export default function App() {
       <h1>Phonebook</h1>
       <ContactForm onAddContact={addContact} />
       <SearchBox value={search} onChange={handleSearchChange} />
-      <ContactList items={contact} onDeleteContact={deleteContact} contacts={filteredContacts}/>
+      <ContactList  onDeleteContact={deleteContact} contacts={filteredContacts}/>
     </div>
 
   )
